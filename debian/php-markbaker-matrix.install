@@ -1,0 +1,2 @@
+classes/src/*       usr/share/php/Matrix/
+debian/autoload.php usr/share/php/Matrix/

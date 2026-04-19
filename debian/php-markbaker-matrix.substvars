@@ -1,0 +1,6 @@
+phpcomposer:name=markbaker/matrix
+phpcomposer:description=PHP Class for working with matrices
+phpcomposer:Debian-require=php-common, php-common
+phpcomposer:Debian-require-dev=phpunit, php-phpdocumentor (>= 2), php-phpdocumentor (<< 3~~), php-phpmd (>= 2), php-phpmd (<< 3~~), php-sebastian-phpcpd (>= 4.0), php-sebastian-phpcpd (<< 5~~), php-phploc (>= 4.0), php-phploc (<< 5~~), php-squizlabs-php-codesniffer (>= 3.7), php-squizlabs-php-codesniffer (<< 4~~), php-phpcompatibility-php-compatibility (>= 9.3), php-phpcompatibility-php-compatibility (<< 10~~), php-dealerdirect-phpcodesniffer-composer-installer
+misc:Depends=
+misc:Pre-Depends=

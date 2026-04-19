@@ -1,0 +1,11 @@
+Package: php-markbaker-matrix
+Version: 1.0.0-1
+Architecture: all
+Maintainer: Vítězslav Dvořák <vitezslav.dvorak@spojenet.cz>
+Installed-Size: 73
+Section: php
+Priority: optional
+Homepage: https://github.com/MarkBaker/PHPMatrix
+Description: PHP class for working with matrices
+ PHP library providing classes and operations for working with matrices,
+ including LU and QR decompositions and common matrix arithmetic operations.

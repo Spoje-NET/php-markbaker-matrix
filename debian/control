@@ -1,0 +1,16 @@
+Source: php-markbaker-matrix
+Section: php
+Priority: optional
+Maintainer: Vítězslav Dvořák <vitezslav.dvorak@spojenet.cz>
+Build-Depends: debhelper-compat (= 13), pkg-php-tools
+Standards-Version: 4.6.2
+Homepage: https://github.com/MarkBaker/PHPMatrix
+Vcs-Git: https://github.com/Spoje-NET/php-markbaker-matrix.git
+Vcs-Browser: https://github.com/Spoje-NET/php-markbaker-matrix
+
+Package: php-markbaker-matrix
+Architecture: all
+Depends: ${misc:Depends}, ${phpcomposer:Depends}
+Description: PHP class for working with matrices
+ PHP library providing classes and operations for working with matrices,
+ including LU and QR decompositions and common matrix arithmetic operations.

@@ -1,0 +1,9 @@
+./classes/src/Builder.php
+./classes/src/Decomposition
+./classes/src/Div0Exception.php
+./classes/src/Exception.php
+./classes/src/Functions.php
+./classes/src/Matrix.php
+./classes/src/Operations.php
+./classes/src/Operators
+./debian/autoload.php
