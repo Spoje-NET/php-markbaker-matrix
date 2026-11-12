@@ -18,8 +18,10 @@ properties([
 node() {
     ansiColor('xterm') {
         stage('SCM Checkout') {
-            sh 'sudo chown -R jenkins:jenkins . || true'
+            sh 'sudo chown -R jenkins:jenkins . 2>/dev/null || true'
             checkout scm
+            // Checked out once; every parallel branch unstashes it instead of cloning again.
+            stash name: 'src', useDefaultExcludes: false
         }
     }
 }
@@ -39,8 +41,11 @@ distributions.each { distro ->
         node {
             ansiColor('xterm') {
                 stage('Checkout ' + distroName) {
-                    sh 'sudo chown -R jenkins:jenkins . || true'
-                    checkout scm
+                    sh 'sudo chown -R jenkins:jenkins . 2>/dev/null || true'
+                    // Empty in place (deleteDir() races with delayed unlink on NFS workspaces);
+                    // the shared checkout workspace has read-only .git packs unstash cannot overwrite.
+                    sh 'find . -mindepth 1 -delete 2>/dev/null || true'
+                    unstash 'src'
                     def imageName = vendor + '/' + imagePrefix + dist[0] + ':' + distroCode
                     buildImage = docker.image(imageName)
                     sh 'git checkout debian/changelog'
